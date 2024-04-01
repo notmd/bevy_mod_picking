@@ -13,14 +13,14 @@ resolver = "2"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-bevy_app = { version = "0.13", default-features = false }
-bevy_ecs = { version = "0.13", default-features = false }
-bevy_math = { version = "0.13", default-features = false }
-bevy_reflect = { version = "0.13", default-features = false }
-bevy_render = { version = "0.13", default-features = false }
-bevy_transform = { version = "0.13", default-features = false }
-bevy_utils = { version = "0.13", default-features = false }
-bevy_window = { version = "0.13", default-features = false }
+bevy_app = { path = "../../../../bevyengine/bevy/crates/bevy_app", default-features = false }
+bevy_ecs = { path = "../../../../bevyengine/bevy/crates/bevy_ecs", default-features = false }
+bevy_math = { path = "../../../../bevyengine/bevy/crates/bevy_math", default-features = false }
+bevy_reflect = { path = "../../../../bevyengine/bevy/crates/bevy_reflect", default-features = false }
+bevy_render = { path = "../../../../bevyengine/bevy/crates/bevy_render", default-features = false }
+bevy_transform = { path = "../../../../bevyengine/bevy/crates/bevy_transform", default-features = false }
+bevy_utils = { path = "../../../../bevyengine/bevy/crates/bevy_utils", default-features = false }
+bevy_window = { path = "../../../../bevyengine/bevy/crates/bevy_window", default-features = false }
 
 bevy_xpbd_3d = "0.4"
 # Local

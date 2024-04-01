@@ -19,22 +19,23 @@ all-features = true
 members = ["crates/*", "backends/*"]
 
 [dependencies]
-bevy_app = { version = "0.13", default-features = false }
-bevy_core = { version = "0.13", default-features = false }
-bevy_ecs = { version = "0.13", default-features = false }
-bevy_math = { version = "0.13", default-features = false }
-bevy_reflect = { version = "0.13", default-features = false }
-bevy_render = { version = "0.13", default-features = false }
-bevy_core_pipeline = { version = "0.13", optional = true, default-features = false }
-bevy_text = { version = "0.13", optional = true, default-features = false, features = [
+bevy_app = { path = "../../bevyengine/bevy/crates/bevy_app", default-features = false }
+bevy_core = { path = "../../bevyengine/bevy/crates/bevy_core", default-features = false }
+bevy_color = { path = "../../bevyengine/bevy/crates/bevy_color", default-features = false, optional = true }
+bevy_ecs = { path = "../../bevyengine/bevy/crates/bevy_ecs", default-features = false }
+bevy_math = { path = "../../bevyengine/bevy/crates/bevy_math", default-features = false }
+bevy_reflect = { path = "../../bevyengine/bevy/crates/bevy_reflect", default-features = false }
+bevy_render = { path = "../../bevyengine/bevy/crates/bevy_render", default-features = false }
+bevy_core_pipeline = { path = "../../bevyengine/bevy/crates/bevy_core_pipeline", optional = true, default-features = false }
+bevy_text = { path = "../../bevyengine/bevy/crates/bevy_text", optional = true, default-features = false, features = [
     "default_font",
 ] }
-bevy_ui = { version = "0.13", optional = true, default-features = false }
-bevy_utils = { version = "0.13", default-features = false }
-bevy_window = { version = "0.13", default-features = false }
+bevy_ui = { path = "../../bevyengine/bevy/crates/bevy_ui", optional = true, default-features = false }
+bevy_utils = { path = "../../bevyengine/bevy/crates/bevy_utils", default-features = false }
+bevy_window = { path = "../../bevyengine/bevy/crates/bevy_window", default-features = false }
 
-bevy_eventlistener = "0.7"
-bevy_egui = { optional = true, version = "0.26" }
+bevy_eventlistener = { path = "../bevy_eventlistener" }
+bevy_egui = { optional = true, path = "../../mvlabat/bevy_egui" }
 bevy_rapier3d = { optional = true, version = "0.25" }
 bevy_xpbd_3d = { optional = true, version = "0.4" }
 
@@ -51,9 +52,10 @@ bevy_picking_egui = { optional = true, path = "backends/bevy_picking_egui", vers
 bevy_picking_xpbd = { optional = true, path = "backends/bevy_picking_xpbd", version = "0.18" }
 
 [dev-dependencies]
-bevy = { version = "0.13", default-features = false, features = [
+bevy = { path = "../../bevyengine/bevy", default-features = false, features = [
     "bevy_winit",
     "x11",
+    "bevy_animation",
     "bevy_gltf",
     "bevy_scene",
     "bevy_ui",
@@ -90,7 +92,7 @@ selection = [
     "bevy_picking_highlight/selection",
 ]
 highlight = ["bevy_picking_highlight/pbr"]
-debug = ["bevy_text", "bevy_ui/bevy_text", "bevy_core_pipeline"]
+debug = ["bevy_text", "bevy_ui/bevy_text", "bevy_core_pipeline", "bevy_color"]
 backend_raycast = ["bevy_picking_raycast"]
 backend_rapier = ["bevy_picking_rapier", "bevy_rapier3d"]
 backend_sprite = ["bevy_picking_sprite", "bevy_picking_highlight/sprite"]

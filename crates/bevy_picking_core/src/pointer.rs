@@ -4,10 +4,11 @@ use bevy_ecs::prelude::*;
 use bevy_math::{Rect, Vec2};
 use bevy_reflect::prelude::*;
 use bevy_render::camera::{Camera, NormalizedRenderTarget};
-use bevy_utils::{HashMap, Uuid};
+use bevy_utils::{HashMap};
 use bevy_window::PrimaryWindow;
 
 use std::{fmt::Debug, ops::Deref};
+use uuid::Uuid;
 
 use crate::backend::HitData;
 

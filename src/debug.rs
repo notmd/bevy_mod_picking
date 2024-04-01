@@ -1,6 +1,7 @@
 //! Text and on-screen debugging tools
 
 use std::fmt::Debug;
+use bevy_color::Color;
 
 use bevy_core::Name;
 use bevy_picking_core::focus::HoverMap;

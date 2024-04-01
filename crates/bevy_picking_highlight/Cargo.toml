@@ -13,18 +13,19 @@ resolver = "2"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-bevy_app = { version = "0.13", default-features = false }
-bevy_asset = { version = "0.13", default-features = false }
-bevy_ecs = { version = "0.13", default-features = false }
-bevy_reflect = { version = "0.13", default-features = false }
-bevy_render = { version = "0.13", optional = true, default-features = false }
-bevy_pbr = { version = "0.13", optional = true, default-features = false }
-bevy_sprite = { version = "0.13", optional = true, default-features = false }
+bevy_app = { path = "../../../../bevyengine/bevy/crates/bevy_app", default-features = false }
+bevy_color = { path = "../../../../bevyengine/bevy/crates/bevy_color", default-features = false, optional = true }
+bevy_asset = { path = "../../../../bevyengine/bevy/crates/bevy_asset", default-features = false }
+bevy_ecs = { path = "../../../../bevyengine/bevy/crates/bevy_ecs", default-features = false }
+bevy_reflect = { path = "../../../../bevyengine/bevy/crates/bevy_reflect", default-features = false }
+bevy_render = { path = "../../../../bevyengine/bevy/crates/bevy_render", optional = true, default-features = false }
+bevy_pbr = { path = "../../../../bevyengine/bevy/crates/bevy_pbr", optional = true, default-features = false }
+bevy_sprite = { path = "../../../../bevyengine/bevy/crates/bevy_sprite", optional = true, default-features = false }
 
 bevy_picking_core = { path = "../bevy_picking_core", version = "0.18" }
 bevy_picking_selection = { optional = true, path = "../bevy_picking_selection", version = "0.18" }
 
 [features]
 selection = ["bevy_picking_selection"]
-sprite = ["bevy_render", "bevy_sprite"]
-pbr = ["bevy_render", "bevy_pbr"]
+sprite = ["bevy_render", "bevy_sprite", "bevy_color"]
+pbr = ["bevy_render", "bevy_pbr", "bevy_color"]
