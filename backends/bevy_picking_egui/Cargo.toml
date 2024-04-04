@@ -13,12 +13,12 @@ resolver = "2"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-bevy_app = { path = "../../../../bevyengine/bevy/crates/bevy_app", default-features = false }
-bevy_ecs = { path = "../../../../bevyengine/bevy/crates/bevy_ecs", default-features = false }
-bevy_reflect = { path = "../../../../bevyengine/bevy/crates/bevy_reflect", default-features = false }
-bevy_render = { path = "../../../../bevyengine/bevy/crates/bevy_render", default-features = false }
+bevy_app = { git = "https://github.com/bevyengine/bevy", default-features = false }
+bevy_ecs = { git = "https://github.com/bevyengine/bevy", default-features = false }
+bevy_reflect = { git = "https://github.com/bevyengine/bevy", default-features = false }
+bevy_render = { git = "https://github.com/bevyengine/bevy", default-features = false }
 
-bevy_egui = { path = "../../../../mvlabat/bevy_egui" }
+bevy_egui = { git = "https://github.com/tychedelia/bevy_egui" }
 # Local
 bevy_picking_core = { path = "../../crates/bevy_picking_core", version = "0.18" }
 bevy_picking_selection = { path = "../../crates/bevy_picking_selection", optional = true, version = "0.18" }

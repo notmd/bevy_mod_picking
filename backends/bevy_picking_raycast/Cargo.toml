@@ -13,13 +13,13 @@ resolver = "2"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-bevy_app = { path = "../../../../bevyengine/bevy/crates/bevy_app", default-features = false }
-bevy_ecs = { path = "../../../../bevyengine/bevy/crates/bevy_ecs", default-features = false }
-bevy_reflect = { path = "../../../../bevyengine/bevy/crates/bevy_reflect", default-features = false }
-bevy_render = { path = "../../../../bevyengine/bevy/crates/bevy_render", default-features = false }
-bevy_transform = { path = "../../../../bevyengine/bevy/crates/bevy_transform", default-features = false }
-bevy_window = { path = "../../../../bevyengine/bevy/crates/bevy_window", default-features = false }
+bevy_app = { git = "https://github.com/bevyengine/bevy", default-features = false }
+bevy_ecs = { git = "https://github.com/bevyengine/bevy", default-features = false }
+bevy_reflect = { git = "https://github.com/bevyengine/bevy", default-features = false }
+bevy_render = { git = "https://github.com/bevyengine/bevy", default-features = false }
+bevy_transform = { git = "https://github.com/bevyengine/bevy", default-features = false }
+bevy_window = { git = "https://github.com/bevyengine/bevy", default-features = false }
 
-bevy_mod_raycast = { path = "../../../bevy_mod_raycast" }
+bevy_mod_raycast = { git = "https://github.com/tychedelia/bevy_mod_raycast" }
 # Local
 bevy_picking_core = { path = "../../crates/bevy_picking_core", version = "0.18" }

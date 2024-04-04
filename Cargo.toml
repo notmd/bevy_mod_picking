@@ -19,23 +19,23 @@ all-features = true
 members = ["crates/*", "backends/*"]
 
 [dependencies]
-bevy_app = { path = "../../bevyengine/bevy/crates/bevy_app", default-features = false }
-bevy_core = { path = "../../bevyengine/bevy/crates/bevy_core", default-features = false }
-bevy_color = { path = "../../bevyengine/bevy/crates/bevy_color", default-features = false, optional = true }
-bevy_ecs = { path = "../../bevyengine/bevy/crates/bevy_ecs", default-features = false }
-bevy_math = { path = "../../bevyengine/bevy/crates/bevy_math", default-features = false }
-bevy_reflect = { path = "../../bevyengine/bevy/crates/bevy_reflect", default-features = false }
-bevy_render = { path = "../../bevyengine/bevy/crates/bevy_render", default-features = false }
-bevy_core_pipeline = { path = "../../bevyengine/bevy/crates/bevy_core_pipeline", optional = true, default-features = false }
-bevy_text = { path = "../../bevyengine/bevy/crates/bevy_text", optional = true, default-features = false, features = [
+bevy_app = { git = "https://github.com/bevyengine/bevy", default-features = false }
+bevy_core = { git = "https://github.com/bevyengine/bevy", default-features = false }
+bevy_color = { git = "https://github.com/bevyengine/bevy", default-features = false, optional = true }
+bevy_ecs = { git = "https://github.com/bevyengine/bevy", default-features = false }
+bevy_math = { git = "https://github.com/bevyengine/bevy", default-features = false }
+bevy_reflect = { git = "https://github.com/bevyengine/bevy", default-features = false }
+bevy_render = { git = "https://github.com/bevyengine/bevy", default-features = false }
+bevy_core_pipeline = { git = "https://github.com/bevyengine/bevy", optional = true, default-features = false }
+bevy_text = { git = "https://github.com/bevyengine/bevy", optional = true, default-features = false, features = [
     "default_font",
 ] }
-bevy_ui = { path = "../../bevyengine/bevy/crates/bevy_ui", optional = true, default-features = false }
-bevy_utils = { path = "../../bevyengine/bevy/crates/bevy_utils", default-features = false }
-bevy_window = { path = "../../bevyengine/bevy/crates/bevy_window", default-features = false }
+bevy_ui = { git = "https://github.com/bevyengine/bevy", optional = true, default-features = false }
+bevy_utils = { git = "https://github.com/bevyengine/bevy", default-features = false }
+bevy_window = { git = "https://github.com/bevyengine/bevy", default-features = false }
 
-bevy_eventlistener = { path = "../bevy_eventlistener" }
-bevy_egui = { optional = true, path = "../../mvlabat/bevy_egui" }
+bevy_eventlistener = { git = "https://github.com/tychedelia/bevy_eventlistener" }
+bevy_egui = { optional = true, git = "https://github.com/tychedelia/bevy_egui" }
 bevy_rapier3d = { optional = true, version = "0.25" }
 bevy_xpbd_3d = { optional = true, version = "0.4" }
 
@@ -52,7 +52,7 @@ bevy_picking_egui = { optional = true, path = "backends/bevy_picking_egui", vers
 bevy_picking_xpbd = { optional = true, path = "backends/bevy_picking_xpbd", version = "0.18" }
 
 [dev-dependencies]
-bevy = { path = "../../bevyengine/bevy", default-features = false, features = [
+bevy = { git = "https://github.com/bevyengine/bevy", default-features = false, features = [
     "bevy_winit",
     "x11",
     "bevy_animation",
