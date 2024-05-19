@@ -19,6 +19,6 @@ bevy_input = { git = "https://github.com/bevyengine/bevy", default-features = fa
 bevy_reflect = { git = "https://github.com/bevyengine/bevy", default-features = false }
 bevy_utils = { git = "https://github.com/bevyengine/bevy", default-features = false }
 
-bevy_eventlistener = { path = "../../../bevy_eventlistener" }
+bevy_eventlistener = { git = "https://github.com/tychedelia/bevy_eventlistener" }
 
 bevy_picking_core = { path = "../bevy_picking_core", version = "0.18" }

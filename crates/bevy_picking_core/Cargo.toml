@@ -23,5 +23,5 @@ bevy_utils = { git = "https://github.com/bevyengine/bevy", default-features = fa
 bevy_window = { git = "https://github.com/bevyengine/bevy", default-features = false }
 bevy_transform = { git = "https://github.com/bevyengine/bevy", default-features = false }
 
-bevy_eventlistener = { path = "../../../bevy_eventlistener" }
+bevy_eventlistener = { git = "https://github.com/tychedelia/bevy_eventlistener" }
 uuid = { version = "1.7.0", features = ["v4"] }
